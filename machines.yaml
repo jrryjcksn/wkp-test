@@ -4,7 +4,7 @@ items:
 - apiVersion: cluster.k8s.io/v1alpha1
   kind: Machine
   metadata:
-    name: T1000
+    name: t1000
     labels:
       set: master
   spec:
@@ -21,7 +21,7 @@ items:
 - apiVersion: cluster.k8s.io/v1alpha1
   kind: Machine
   metadata:
-    name: T800
+    name: t800
     labels:
       set: node
   spec:
