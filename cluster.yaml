@@ -13,5 +13,5 @@ spec:
     value:
       apiVersion: baremetalproviderspec/v1alpha1
       kind: BareMetalClusterProviderSpec
-      sshKeyPath: cluster-key
+      sshKeyPath: /Users/jerry/src/github.com/weaveworks/wks/examples/footloose/cluster-key
       user: root
