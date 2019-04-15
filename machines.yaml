@@ -18,8 +18,6 @@ items:
         private:
           address: 172.17.0.2
           port: 22
-    # versions:
-    #   controlPlane: 1.13.5
 - apiVersion: cluster.k8s.io/v1alpha1
   kind: Machine
   metadata:
@@ -37,5 +35,3 @@ items:
         private:
           address: 172.17.0.3
           port: 22
-    # versions:
-    #   controlPlane: 1.13.5
