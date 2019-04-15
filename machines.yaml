@@ -53,4 +53,4 @@ items:
           address: 172.17.0.4
           port: 22
   versions:
-    controlPlane: 1.12.7
+    kubelet: 1.12.7
