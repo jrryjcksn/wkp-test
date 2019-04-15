@@ -4,6 +4,7 @@ metadata:
   name: t200
   labels:
     set: node
+    mylabel: foo
 spec:
   providerSpec:
     value:
