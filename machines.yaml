@@ -24,7 +24,7 @@ items:
     name: t800
     labels:
       set: node
-      goo: xxx
+      goof: xxx
   spec:
     providerSpec:
       value:
