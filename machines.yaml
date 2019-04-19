@@ -24,7 +24,7 @@ items:
     name: t800
     labels:
       set: node
-      goodwhat: badtothebone
+      goodwhat: bbbbad
   spec:
     providerSpec:
       value:
