@@ -17,4 +17,4 @@ spec:
         address: 172.17.0.5
         port: 22
   versions:
-    kubelet: 1.13.5
+    kubelet: 1.14.1
