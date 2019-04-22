@@ -3,7 +3,7 @@ kind: Machine
 metadata:
   name: t200
   labels:
-    set: master
+    set: node
     mylabel: foogle
 spec:
   providerSpec:
