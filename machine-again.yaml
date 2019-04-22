@@ -1,10 +1,10 @@
 apiVersion: cluster.k8s.io/v1alpha1
 kind: Machine
 metadata:
-  name: t200
+  name: t100
   labels:
-    set: master
-    mylabel: foogle
+    set: node
+    mylabel: fooglor
 spec:
   providerSpec:
     value:
@@ -14,7 +14,7 @@ spec:
         address: 127.0.0.1
         port: 2223
       private:
-        address: 172.17.0.4
+        address: 172.17.0.5
         port: 22
   versions:
     kubelet: 1.13.5
