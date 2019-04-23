@@ -7,7 +7,7 @@ items:
     name: t1000
     labels:
       set: master
-      kversion: 1.14.0
+      kversion: 1.14.1
   spec:
     providerSpec:
       value:
@@ -30,7 +30,7 @@ items:
     labels:
       set: master
       goodwhat: bbbbad
-      kversion: 1.14.0
+      kversion: 1.14.1
   spec:
     providerSpec:
       value:
