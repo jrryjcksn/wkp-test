@@ -5,6 +5,7 @@ metadata:
   labels:
     set: node
     mylabel: foogler
+    kversion: 1.14.0
 spec:
   providerSpec:
     value:
@@ -17,5 +18,5 @@ spec:
         address: 172.17.0.4
         port: 22
   versions:
-    controlPlane: 1.13.5
-    kubelet: 1.14.0
+    controlPlane: 1.14.1
+    kubelet: 1.14.1
