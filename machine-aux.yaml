@@ -17,4 +17,5 @@ spec:
         address: 172.17.0.4
         port: 22
   versions:
+    controlPlane: 1.13.5
     kubelet: 1.13.5
