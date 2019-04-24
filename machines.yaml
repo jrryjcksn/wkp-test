@@ -6,7 +6,7 @@ items:
   metadata:
     name: t1000
     labels:
-      set: node
+      set: master
       kversion: 1.14.1
   spec:
     providerSpec:
@@ -28,7 +28,7 @@ items:
   metadata:
     name: t800
     labels:
-      set: master
+      set: node
       goodwhat: bbbbad
       kversion: 1.14.1
   spec:
