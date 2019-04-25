@@ -7,7 +7,7 @@ items:
     name: t1000
     labels:
       set: node
-      kversion: 1.15.4
+      kversion: 1.15.5
   spec:
     providerSpec:
       value:
@@ -30,7 +30,7 @@ items:
     labels:
       set: node
       goodwhat: bbbbad
-      kversion: 1.15.4
+      kversion: 1.15.5
   spec:
     providerSpec:
       value:
@@ -52,7 +52,7 @@ items:
     labels:
       set: master
       mylabel: foogler
-      kversion: 1.15.4
+      kversion: 1.15.5
   spec:
     providerSpec:
       value:
