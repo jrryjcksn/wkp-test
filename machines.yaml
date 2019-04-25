@@ -60,7 +60,7 @@ items:
         kind: BareMetalMachineProviderSpec
         public:
           address: 127.0.0.1
-          port: 2223
+          port: 2224
         private:
           address: 172.17.0.4
           port: 22
