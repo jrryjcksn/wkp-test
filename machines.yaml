@@ -30,7 +30,7 @@ items:
     labels:
       set: node
       goodwhat: bbbbad
-      kversion: 1.15.6
+      kversion: 1.15.7
   spec:
     providerSpec:
       value:
