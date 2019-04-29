@@ -6,7 +6,7 @@ items:
   metadata:
     name: t1000
     labels:
-      set: node
+      set: master
       kversion: 1.15.6
   spec:
     providerSpec:
@@ -50,7 +50,7 @@ items:
   metadata:
     name: t200
     labels:
-      set: master
+      set: node
       mylabel: foogler
       kversion: 1.15.6
   spec:
