@@ -52,7 +52,7 @@ items:
     labels:
       set: node
       mylabel: foogler
-      kversion: 1.15.8
+      kversion: 1.15.9
   spec:
     providerSpec:
       value:
