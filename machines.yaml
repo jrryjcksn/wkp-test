@@ -28,7 +28,7 @@ items:
   metadata:
     name: t800
     labels:
-      set: node
+      set: master
       goodwhat: bbbbad
       kversion: 1.15.7
   spec:
