@@ -25,15 +25,15 @@ spec:
             configmap: repo
             key: docker-ce.repo
           destination: /etc/yum.repos.d/docker-ce.repo
-        - source
+        - source:
             configmap: authn-authz
             key: master-config
           destination: /etc/weaveworks/wks/master-config.yaml
-        - source
+        - source:
             configmap: authn-authz
             key: authn-config
           destination: /etc/weaveworks/wks/authn-config.yaml
-        - source
+        - source:
             configmap: authn-authz
             key: authz-config
           destination: /etc/weaveworks/wks/authz-config.yaml
