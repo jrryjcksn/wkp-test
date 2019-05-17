@@ -6,7 +6,7 @@ items:
   metadata:
     name: t1000
     labels:
-      set: master
+      set: worker
       kversion: 1.15.6
   spec:
     providerSpec:
