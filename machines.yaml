@@ -28,7 +28,7 @@ items:
   metadata:
     name: t800
     labels:
-      set: node
+      set: master
       goodwhat: bbbbad
       kversion: 1.15.7
   spec:
@@ -45,47 +45,47 @@ items:
     versions:
       controlPlane: 1.14.1
       kubelet: 1.14.1
-# - apiVersion: cluster.k8s.io/v1alpha1
-#   kind: Machine
-#   metadata:
-#     name: t200
-#     labels:
-#       set: node
-#       mylabel: foogler
-#       kversion: 1.15.9
-#   spec:
-#     providerSpec:
-#       value:
-#         apiVersion: baremetalproviderspec/v1alpha1
-#         kind: BareMetalMachineProviderSpec
-#         public:
-#           address: 127.0.0.1
-#           port: 2224
-#         private:
-#           address: 172.17.0.4
-#           port: 22
-#     versions:
-#       controlPlane: 1.14.1
-#       kubelet: 1.14.1
-# - apiVersion: cluster.k8s.io/v1alpha1
-#   kind: Machine
-#   metadata:
-#     name: t100
-#     labels:
-#       set: master
-#       mylabel: foogler
-#       kversion: 1.15.9
-#   spec:
-#     providerSpec:
-#       value:
-#         apiVersion: baremetalproviderspec/v1alpha1
-#         kind: BareMetalMachineProviderSpec
-#         public:
-#           address: 127.0.0.1
-#           port: 2225
-#         private:
-#           address: 172.17.0.5
-#           port: 22
-#     versions:
-#       controlPlane: 1.14.1
-#       kubelet: 1.14.1
+- apiVersion: cluster.k8s.io/v1alpha1
+  kind: Machine
+  metadata:
+    name: t200
+    labels:
+      set: worker
+      mylabel: foogler
+      kversion: 1.15.9
+  spec:
+    providerSpec:
+      value:
+        apiVersion: baremetalproviderspec/v1alpha1
+        kind: BareMetalMachineProviderSpec
+        public:
+          address: 127.0.0.1
+          port: 2224
+        private:
+          address: 172.17.0.4
+          port: 22
+    versions:
+      controlPlane: 1.14.1
+      kubelet: 1.14.1
+- apiVersion: cluster.k8s.io/v1alpha1
+  kind: Machine
+  metadata:
+    name: t100
+    labels:
+      set: worker
+      mylabel: foogler
+      kversion: 1.15.9
+  spec:
+    providerSpec:
+      value:
+        apiVersion: baremetalproviderspec/v1alpha1
+        kind: BareMetalMachineProviderSpec
+        public:
+          address: 127.0.0.1
+          port: 2225
+        private:
+          address: 172.17.0.5
+          port: 22
+    versions:
+      controlPlane: 1.14.1
+      kubelet: 1.14.1
