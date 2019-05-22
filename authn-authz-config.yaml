@@ -9,6 +9,7 @@ data:
     apiVersion: kubeadm.k8s.io/v1beta1
     apiServer:
       extraArgs:
+        authenticationtion-mode: [Webhook]
         authentication-token-webhook-config-file: "/etc/weaveworks/wks/authn-config.yaml"
         authentication-token-webhook-cache-ttl: 24h
         authorization-mode: [Webhook]
@@ -25,7 +26,7 @@ data:
       - name: name-of-remote-authn-service
         cluster:
           certificate-authority: "/etc/weaveworks/wks/pem/authn-ca.pem"   # CA for verifying the remote service.
-          server: https://authn.example.com/authenticate # URL of remote service to query. Must use 'https'.
+          server: https://host.docker.internal/authenticate # URL of remote service to query. Must use 'https'.
 
     # users refers to the API server's webhook configuration.
     users:
@@ -51,7 +52,7 @@ data:
       - name: name-of-remote-authz-service
         cluster:
           certificate-authority: "/etc/weaveworks/wks/pem/authz-ca.pem"   # CA for verifying the remote service.
-          server: https://authz.example.com/authenticate # URL of remote service to query. Must use 'https'.
+          server: https://host.docker.internal/authorize # URL of remote service to query. Must use 'https'.
 
     # users refers to the API server's webhook configuration.
     users:
