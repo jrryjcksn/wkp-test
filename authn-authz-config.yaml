@@ -9,7 +9,6 @@ data:
     apiVersion: kubeadm.k8s.io/v1beta1
     apiServer:
       extraArgs:
-        authentication-mode: Webhook
         authentication-token-webhook-config-file: "/etc/weaveworks/wks/authn-config.yaml"
         authentication-token-webhook-cache-ttl: 24h
         authorization-mode: Webhook
