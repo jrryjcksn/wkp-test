@@ -28,15 +28,15 @@ spec:
         - source:
             configmap: authn-authz
             key: master-config
-          destination: /etc/weaveworks/wks/master-config.yaml
+          destination: /etc/pki/weaveworks/wks/master-config.yaml
         - source:
             configmap: authn-authz
             key: authn-config
-          destination: /etc/weaveworks/wks/authn-config.yaml
+          destination: /etc/pki/weaveworks/wks/authn-config.yaml
         - source:
             configmap: authn-authz
             key: authz-config
-          destination: /etc/weaveworks/wks/authz-config.yaml
+          destination: /etc/pki/weaveworks/wks/authz-config.yaml
       cri:
         kind: docker
         package: docker-ce
