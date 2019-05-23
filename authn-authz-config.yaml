@@ -24,7 +24,7 @@ data:
     clusters:
       - name: name-of-remote-authn-service
         cluster:
-          certificate-authority: "/etc/weaveworks/wks/pem/authn-ca.pem"   # CA for verifying the remote service.
+          certificate-authority: "/etc/pki/weaveworks/wks/pem/authn-ca.pem"   # CA for verifying the remote service.
           server: https://host.docker.internal/authenticate # URL of remote service to query. Must use 'https'.
 
     # users refers to the API server's webhook configuration.
