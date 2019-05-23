@@ -9,10 +9,10 @@ data:
     apiVersion: kubeadm.k8s.io/v1beta1
     apiServer:
       extraArgs:
-        authentication-token-webhook-config-file: "/etc/weaveworks/wks/authn-config.yaml"
+        authentication-token-webhook-config-file: "/etc/pki/weaveworks/wks/authn-config.yaml"
         authentication-token-webhook-cache-ttl: 24h
         authorization-mode: Webhook
-        authorization-webhook-config-file: "/etc/weaveworks/wks/authz-config.yaml"
+        authorization-webhook-config-file: "/etc/pki/weaveworks/wks/authz-config.yaml"
         authorization-webhook-cache-unauthorized-ttl: 1h
         authorization-webhook-cache-authorized-ttl: 24h
   authn-config: |
@@ -31,8 +31,8 @@ data:
     users:
       - name: name-of-api-server
         user:
-          client-certificate: "/etc/weaveworks/wks/pem/authn-cert.pem" # cert for the webhook plugin to use
-          client-key: "/etc/weaveworks/wks/pem/authn-key.pem"          # key matching the cert
+          client-certificate: "/etc/pki/weaveworks/wks/pem/authn-cert.pem" # cert for the webhook plugin to use
+          client-key: "/etc/pki/weaveworks/wks/pem/authn-key.pem"          # key matching the cert
 
     # kubeconfig files require a context. Provide one for the API server.
     current-context: webhook
@@ -50,15 +50,15 @@ data:
     clusters:
       - name: name-of-remote-authz-service
         cluster:
-          certificate-authority: "/etc/weaveworks/wks/pem/authz-ca.pem"   # CA for verifying the remote service.
+          certificate-authority: "/etc/pki/weaveworks/wks/pem/authz-ca.pem"   # CA for verifying the remote service.
           server: https://host.docker.internal/authorize # URL of remote service to query. Must use 'https'.
 
     # users refers to the API server's webhook configuration.
     users:
       - name: name-of-api-server
         user:
-          client-certificate: "/etc/weaveworks/wks/pem/authz-cert.pem" # cert for the webhook plugin to use
-          client-key: "/etc/weaveworks/wks/pem/authz-key.pem"          # key matching the cert
+          client-certificate: "/etc/pki/weaveworks/wks/pem/authz-cert.pem" # cert for the webhook plugin to use
+          client-key: "/etc/pki/weaveworks/wks/pem/authz-key.pem"          # key matching the cert
 
     # kubeconfig files require a context. Provide one for the API server.
     current-context: webhook
