@@ -25,7 +25,7 @@ data:
       - name: name-of-remote-authn-service
         cluster:
           certificate-authority: "/etc/pki/weaveworks/wks/pem/authn-ca.pem"   # CA for verifying the remote service.
-          server: https://host.docker.internal/authenticate # URL of remote service to query. Must use 'https'.
+          server: https://host.docker.internal:5001/authenticate # URL of remote service to query. Must use 'https'.
 
     # users refers to the API server's webhook configuration.
     users:
@@ -51,7 +51,7 @@ data:
       - name: name-of-remote-authz-service
         cluster:
           certificate-authority: "/etc/pki/weaveworks/wks/pem/authz-ca.pem"   # CA for verifying the remote service.
-          server: https://host.docker.internal/authorize # URL of remote service to query. Must use 'https'.
+          server: https://host.docker.internal:5001/authorize # URL of remote service to query. Must use 'https'.
 
     # users refers to the API server's webhook configuration.
     users:
