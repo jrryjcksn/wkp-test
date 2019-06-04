@@ -15,13 +15,13 @@ spec:
       kind: BareMetalClusterProviderSpec
       sshKeyPath: /Users/jerry/src/github.com/weaveworks/wks/examples/footloose/cluster-key
       user: root
-      authenticationWebhook:
-        cacheTTL: 24h
-        secret: authentication-webhook
-      authorizationWebhook:
-        unauthorizedTTL: 1h
-        authorizedTTL: 24h
-        secret: authorization-webhook
+      # authenticationWebhook:
+      #   cacheTTL: 24h
+      #   secret: authentication-webhook
+      # authorizationWebhook:
+      #   unauthorizedTTL: 1h
+      #   authorizedTTL: 24h
+      #   secret: authorization-webhook
       os:
         files:
         - source:
