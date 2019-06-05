@@ -18,12 +18,12 @@ spec:
       authenticationWebhook:
         cacheTTL: 24h
         secret: authn
-        URL: https://host.docker.internal:5001/authenticate
+        url: https://host.docker.internal:5001/authenticate
       authorizationWebhook:
         unauthorizedTTL: 1h
         authorizedTTL: 24h
         secret: authz
-        URL: https://host.docker.internal:5001/authorize
+        url: https://host.docker.internal:5001/authorize
       os:
         files:
         - source:
