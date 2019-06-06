@@ -17,12 +17,12 @@ spec:
       user: root
       # authenticationWebhook:
       #   cacheTTL: 24h
-      #   secret: authn
+      #   secretFile: authn.yaml
       #   url: https://host.docker.internal:5001/authenticate
       authorizationWebhook:
         unauthorizedTTL: 1h
         authorizedTTL: 24h
-        secret: authz
+        secretFile: authz.yaml
         url: https://host.docker.internal:5001/authorize
       os:
         files:
