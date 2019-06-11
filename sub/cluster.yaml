@@ -40,7 +40,7 @@ spec:
         version: 18.06.2.ce
       addons:
       - name: ingress-nginx
-        deps: [https://raw.githubusercontent.com/kubernetes/ingress-nginx/1f4469fc217cddfde5abef7fbeeac9eeda520434/deploy/mandatory.yaml]
+        deps: ["https://raw.githubusercontent.com/kubernetes/ingress-nginx/1f4469fc217cddfde5abef7fbeeac9eeda520434/deploy/mandatory.yaml"]
         params:
           type: "NodePort"
           httpPort: "30080"
