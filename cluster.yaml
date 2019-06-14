@@ -19,11 +19,11 @@ spec:
       #   cacheTTL: 24h
       #   secretFile: authn.yaml
       #   url: https://host.docker.internal:5001/authenticate
-      # authorizationWebhook:
-      #   unauthorizedTTL: 1h
-      #   authorizedTTL: 24h
-      #   secretFile: sub/authz.yaml
-      #   url: https://host.docker.internal:5001/authorize
+      authorizationWebhook:
+        unauthorizedTTL: 1h
+        authorizedTTL: 24h
+        secretFile: authz.yaml
+        url: https://host.docker.internal:5001/authorize
       os:
         files:
         - source:
