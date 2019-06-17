@@ -15,11 +15,11 @@ spec:
       kind: BareMetalClusterProviderSpec
       sshKeyPath: /Users/jerry/src/github.com/weaveworks/wks/examples/footloose/cluster-key
       user: root
-      authorizationWebhook:
-        unauthorizedTTL: 1h
-        authorizedTTL: 24h
-        secretFile: authz.yaml
-        url: https://host.docker.internal:5001/authorize
+      # authorizationWebhook:
+      #   unauthorizedTTL: 1h
+      #   authorizedTTL: 24h
+      #   secretFile: authz.yaml
+      #   url: https://host.docker.internal:5001/authorize
       os:
         files:
         - source:
