@@ -3,7 +3,7 @@ items:
     spec:
       providerSpec:
         value:
-          machine:
+          footlooseMachineSpec:
             backend: docker
             ignite:
               cpus: 2
