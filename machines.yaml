@@ -11,7 +11,7 @@ items:
               kernel: weaveworks/ignite-kernel:4.19.47
               memory: 1GB
             image: quay.io/footloose/centos7:0.6.0
-            name: node%d
+            name: noda
             portMappings:
             - containerPort: 22
               hostPort: 2222
