@@ -1,9 +1,7 @@
-cluster:
-  name: firekube
-  privateKey: cluster-key
-machines:
-- count: 2
-  spec:
+apiVersion: v1
+kind: List
+items:
+- spec:
     backend: docker
     ignite:
       cpus: 2

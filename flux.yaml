@@ -3,7 +3,7 @@ items:
 - apiVersion: v1
   kind: Namespace
   metadata:
-    name: weavek8sops
+    name: wksctl
   spec: {}
   status: {}
 - apiVersion: v1
@@ -12,14 +12,14 @@ items:
     labels:
       name: flux
     name: flux
-    namespace: weavek8sops
+    namespace: wksctl
 - apiVersion: rbac.authorization.k8s.io/v1beta1
   kind: ClusterRole
   metadata:
     labels:
       name: flux
     name: flux
-    namespace: weavek8sops
+    namespace: wksctl
   rules:
   - apiGroups:
     - '*'
@@ -37,7 +37,7 @@ items:
     labels:
       name: flux
     name: flux
-    namespace: weavek8sops
+    namespace: wksctl
   roleRef:
     apiGroup: rbac.authorization.k8s.io
     kind: ClusterRole
@@ -45,12 +45,12 @@ items:
   subjects:
   - kind: ServiceAccount
     name: flux
-    namespace: weavek8sops
+    namespace: wksctl
 - apiVersion: apps/v1beta1
   kind: Deployment
   metadata:
     name: memcached
-    namespace: weavek8sops
+    namespace: wksctl
   spec:
     replicas: 1
     selector:
@@ -84,7 +84,7 @@ items:
   kind: Service
   metadata:
     name: memcached
-    namespace: weavek8sops
+    namespace: wksctl
   spec:
     clusterIP: None
     ports:
@@ -99,7 +99,7 @@ items:
   kind: Deployment
   metadata:
     name: flux
-    namespace: weavek8sops
+    namespace: wksctl
   spec:
     replicas: 1
     selector:
@@ -117,8 +117,8 @@ items:
         containers:
         - args:
           - --ssh-keygen-dir=/var/fluxd/keygen
-          - --git-url=git@github.com:jrryjcksn/wkp-test.git
-          - --git-branch=master
+          - --git-url="git@github.com:jrryjcksn/wkp-test.git"
+          - --git-branch="master"
           - --git-poll-interval=30s
           - --git-path="."
           - --memcached-hostname=memcached.weavek8sops.svc.cluster.local
