@@ -1,92 +1,26 @@
-apiVersion: v1
-kind: List
 items:
-- apiVersion: cluster.k8s.io/v1alpha1
-  kind: Machine
-  metadata:
-    name: t1000
-    labels:
-      set: master
-      kversion: 1.15.6
-  spec:
+- spec:
     providerSpec:
       value:
-        apiVersion: baremetalproviderspec/v1alpha1
-        kind: BareMetalMachineProviderSpec
-        public:
-          address: 127.0.0.1
-          port: 2222
-        private:
-          address: 172.17.0.2
-          port: 22
-    versions:
-      controlPlane: 1.14.1
-      kubelet: 1.14.1
-
-- apiVersion: cluster.k8s.io/v1alpha1
-  kind: Machine
-  metadata:
-    name: t800
-    labels:
-      set: worker
-      goodwhat: bbbbad
-      kversion: 1.15.7
-  spec:
-    providerSpec:
-      value:
-        apiVersion: baremetalproviderspec/v1alpha1
-        kind: BareMetalMachineProviderSpec
-        public:
-          address: 127.0.0.1
-          port: 2223
-        private:
-          address: 172.17.0.3
-          port: 22
-    versions:
-      controlPlane: 1.14.1
-      kubelet: 1.14.1
-# - apiVersion: cluster.k8s.io/v1alpha1
-#   kind: Machine
-#   metadata:
-#     name: t200
-#     labels:
-#       set: worker
-#       mylabel: foogler
-#       kversion: 1.15.9
-#   spec:
-#     providerSpec:
-#       value:
-#         apiVersion: baremetalproviderspec/v1alpha1
-#         kind: BareMetalMachineProviderSpec
-#         public:
-#           address: 127.0.0.1
-#           port: 2224
-#         private:
-#           address: 172.17.0.4
-#           port: 22
-#     versions:
-#       controlPlane: 1.14.1
-#       kubelet: 1.14.1
-# - apiVersion: cluster.k8s.io/v1alpha1
-#   kind: Machine
-#   metadata:
-#     name: t100
-#     labels:
-#       set: worker
-#       mylabel: foogler
-#       kversion: 1.15.9
-#   spec:
-#     providerSpec:
-#       value:
-#         apiVersion: baremetalproviderspec/v1alpha1
-#         kind: BareMetalMachineProviderSpec
-#         public:
-#           address: 127.0.0.1
-#           port: 2225
-#         private:
-#           address: 172.17.0.5
-#           port: 22
-#     versions:
-#       controlPlane: 1.14.1
-#       kubelet: 1.14.1
-
+        footlooseMachineSpec:
+          backend: docker
+          ignite:
+            cpus: 2
+            diskSize: 5GB
+            kernel: weaveworks/ignite-kernel:4.19.47
+            memory: 1GB
+          image: quay.io/footloose/centos7:0.6.0
+          name: noda
+          portMappings:
+          - containerPort: 22
+            hostPort: 2222
+          - containerPort: 6443
+            hostPort: 6443
+          - containerPort: 30443
+            hostPort: 30443
+          - containerPort: 30080
+            hostPort: 30080
+          privileged: true
+          volumes:
+          - destination: /var/lib/docker
+            type: volume
